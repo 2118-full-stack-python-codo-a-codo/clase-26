@@ -1,9 +1,11 @@
 from ale.utils import factorial
 from ale.utils import division
+from game.factorygame import FactoryGame
 from game.game import *
 from game.tictactoe import *
 from game.player import *
 from game.my_pro_game import *
+from game.factorygame import *
 import sys
 import json
 #from sys import exc_info
@@ -31,9 +33,9 @@ def main():
     myPlayer2 = Player("Lolo", 2)
 
     print(f"Player1: {myPlayer1} and Player2: {myPlayer2}")
-
-    myGame = TicTacToeGame()
-
+    
+    myGame = FactoryGame.createGame("TicTacToeGame") #Factory parametrizada
+    
     myGame.player1 = myPlayer1
     myGame.player2 = myPlayer2
 
@@ -51,7 +53,7 @@ def main():
     print(Player.score)
 
     myGame.end()
-
+    
     return None
 
 

@@ -1,5 +1,5 @@
 from random import random
-from game.player import *
+#from player import *
 from abc import ABC, abstractmethod
 
 class Game(ABC):
